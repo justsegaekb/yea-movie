@@ -1,4 +1,7 @@
 export const Main = () => {
   return (
-  );
+    <>
+      
+    </>
+  )
 }
