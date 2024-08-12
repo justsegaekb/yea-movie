@@ -1,10 +1,15 @@
 import cn from 'classnames';
 import styles from './Input.module.css';
 
-export const Input = () => {
+import { DetailedHTMLProps, InputHTMLAttributes, ReactElement } from 'react';
+
+interface Props extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+ placeholder: string;
+}
+
+export const Input = ({placeholder, ...props}: Props): ReactElement => {
   const classNames= cn(styles.input, styles.btnGradient)
   return (
-    <input className={classNames} placeholder='Search' />
-
-  )
+    <input className={classNames} placeholder={placeholder} {...props} />
+  );
 }
