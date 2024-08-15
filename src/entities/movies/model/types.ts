@@ -11,7 +11,7 @@ type Url = "url" | "previewUrl"
 interface RequestParams {
   page?: number;
   query?: string; 
-  type: Caregories;
+  type?: Caregories;
 }
 export type ParamsType = RequestParams | null
 

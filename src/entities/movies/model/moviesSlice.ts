@@ -11,9 +11,7 @@ const initialState: State = {
   movies: [],
   filters: {
     page: 1,
-    limit: 10,
-    category: null,
-    keywords: "",
+    query: '',
   }
 }
 
