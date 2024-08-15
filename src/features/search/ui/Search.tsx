@@ -1,8 +1,8 @@
-import { useGetMoviesQuery } from '@/entities/movies'
 import { Heading } from '@/shared/uiKit/heading'
 import { Input } from '@/shared/uiKit/input'
 import { useState } from 'react'
 import { useDebounce } from '@/shared/hooks/useDebounce/useDebounce'
+import { useGetMoviesQuery } from '@/entities/movies'
 
 export const Search = () => {
   const [value, setValue] = useState<string>('')
