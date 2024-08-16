@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import {IMovie, ParamsType} from './types'
+import {IMovie, ParamsType} from '../../../shared/types/types'
 import type { PayloadAction } from '@reduxjs/toolkit';
 
 interface State {

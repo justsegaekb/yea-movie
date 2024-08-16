@@ -1,5 +1,7 @@
 import { useGetMoviesQuery } from "./api/moviesApi";
-import type {Caregories, ParamsType, IMovie, MoviesApiResonse} from './model/types'
+import moviesReducer from "./model/moviesSlice"
+import type {Caregories, ParamsType, IMovie, MoviesApiResonse} from '../../shared/types/types'
 
-export {useGetMoviesQuery};
-export type {Caregories, ParamsType, IMovie, MoviesApiResonse}
+
+export {useGetMoviesQuery, moviesReducer};
+export type {Caregories, ParamsType, IMovie, MoviesApiResonse }
