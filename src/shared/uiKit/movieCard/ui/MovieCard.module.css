@@ -1,0 +1,37 @@
+.movieCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-light);
+  max-width: 165px;
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+.movieCard img {
+  border-radius: 26px;
+  max-height: 125px; 
+}
+
+.gradient {
+  color: var(--font-light);
+  border: 1px double transparent;
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  color: #e8e8e8;
+  text-overflow: ellipses;
+}
+
+.year {
+  font-size: 12px;
+  color: #828282;
+}

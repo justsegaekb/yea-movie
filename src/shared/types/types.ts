@@ -6,7 +6,7 @@ export enum Caregories {
   "animated-series" = 5,
 }
 
-type Url = "url" | "previewUrl"
+export type Url = "url" | "previewUrl"
 
 interface RequestParams {
   page?: number;
@@ -33,7 +33,7 @@ export interface IMovie {
   seriesLength: number | null,
   ratingMpaa: string | null,
   ageRating: number | null,
-  poster: Record<Url, string | null>,
+  poster: Record<Url, string>,
   backdrop: Record<Url, string | null>,
   genres: Record<"name", string>[],
   countries: Record<"name", string>[], 

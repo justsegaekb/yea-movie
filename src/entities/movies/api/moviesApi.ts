@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { MoviesApiResonse, ParamsType } from "../model/types";
+import { MoviesApiResonse, ParamsType } from "../../../shared/types/types";
 import { setMovies } from "../model/moviesSlice";
 const BASE_URL = import.meta.env.VITE_KINOPOISK_BASE_URL;
 const API_KEY = import.meta.env.VITE_X_API_KEY;
