@@ -7,7 +7,12 @@ import { Input } from "@/shared/uiKit/input";
 import { MovieCard } from "@/features/movieCard";
 import { Paragraph } from "@/shared/uiKit/paragraph/ui/Paragraph";
 import { Rating } from "@/shared/uiKit/rating";
+import { useGetCategoriesQuery } from "@/entities/categories/api/categoriesApi";
+import { useAppSelector } from "@/app/appStore";
 export const Main = () => {
+  useGetCategoriesQuery(null);
+  const categories = useAppSelector((state) => state.movies.categories);
+
   return (
     <>
       <div style={{ display: "flex", gap: "9px", flexDirection: "column" }}>
@@ -41,6 +46,15 @@ export const Main = () => {
         poster="https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/e9008e2f-433f-43b0-b9b8-2ea8e3fb6c9b/600x900"
         year="2002"
       />
+      {categories?.map(({ name, _ }, i) => {
+        return (
+          <CategoryCard
+            key={i}
+            title={name}
+            direction={i % 2 === 0 ? "left" : "right"}
+          />
+        );
+      })}
     </>
   );
 };
