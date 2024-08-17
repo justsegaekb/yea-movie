@@ -17,6 +17,10 @@
   height: 54px;
 }
 
+.imageWrapper:hover {
+  box-shadow: #6f4cff 0px 0px 20px 0px;
+}
+
 .image {
   max-height: 50px;
   max-height: 50px;
