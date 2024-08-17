@@ -35,7 +35,12 @@ export const Main = () => {
       <Button>Кнопка</Button>
       <CategoryCard title="Фильмы" direction="left" />
       <CategoryCard title="Сериалы" direction="right" />
-      <MovieCard />
+      <MovieCard
+        name="Брат 2"
+        alternativeName="alt name"
+        poster="https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/e9008e2f-433f-43b0-b9b8-2ea8e3fb6c9b/600x900"
+        year="2002"
+      />
     </>
   );
 };

@@ -6,47 +6,38 @@ export enum Caregories {
   "animated-series" = 5,
 }
 
-export type Url = "url" | "previewUrl"
+export type Url = "url" | "previewUrl";
 
 interface RequestParams {
   page?: number;
-  query?: string; 
+  limit?: number;
   type?: Caregories;
+  query?: string;
 }
-export type ParamsType = RequestParams | null
+export type ParamsType = RequestParams | null;
 
 export interface IMovie {
-  id: number,
-  name: string | null,
-  alternativeName: string | null,
-  enName: string | null,
-  type:   Caregories,
-  typeNumber: Caregories,
-  year: number,
-  description: string | null,
-  shortDescription: string | null,
-  status: string | null,
-  rating: Record<string, number | null>,
-  votes: Record<string, number | null>,
-  movieLength: number | null,
-  totalSeriesLength: number | null,
-  seriesLength: number | null,
-  ratingMpaa: string | null,
-  ageRating: number | null,
-  poster: Record<Url, string>,
-  backdrop: Record<Url, string | null>,
-  genres: Record<"name", string>[],
-  countries: Record<"name", string>[], 
-  top10: string | null,
-  top250: string | null,
-  isSeries: boolean,
-  ticketsOnSale: boolean
+  id: number;
+  name: string | null;
+  alternativeName: string | null;
+  enName: string | null;
+  type: Caregories;
+  typeNumber: Caregories;
+  year: number;
+  description: string | null;
+  rating: Record<string, number | null>;
+  votes: Record<string, number | null>;
+  poster: Record<Url, string>;
+  backdrop: Record<Url, string | null>;
+  genres: Record<"name", string>[];
 }
 
 export interface MoviesApiResonse {
-  docs: Partial<IMovie[]>, 
-  limit: number,
-  page: number,
-  pages: number,
-  total: number,
+  docs: Partial<IMovie[]>;
+  limit: number;
+  page: number;
+  pages: number;
+  total: number;
+  query: string;
 }
+
