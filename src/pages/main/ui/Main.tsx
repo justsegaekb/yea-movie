@@ -1,20 +1,14 @@
-import { useAppSelector } from "@/app/appStore"
-import { Search } from "@/features/search"
-import { MovieCard } from "@/shared/uiKit/movieCard/ui/MovieCard"
+import { ActorCard } from "@/shared/uiKit/actorCard";
+import { mockData } from "@/shared/uiKit/actorCard/model/mockData";
 
 export const Main = () => {
-  
-  const movie = useAppSelector((state) => state.movies.movies[6])  
-
-    
   return (
     <>
-      <Search />
-      <div style={{display: 'flex', gap: '10px'}}>
-        <MovieCard id={movie?.id} poster={movie?.poster} alternativeName={movie?.alternativeName} name={movie?.name} year={movie?.year} rating={movie?.rating}/>
-        <MovieCard id={movie?.id} poster={movie?.poster} alternativeName={movie?.alternativeName} name={movie?.name} year={movie?.year} rating={movie?.rating}/>
+      <div style={{ display: "flex", gap: "10px" }}>
+        {mockData.map(({ name, role, image }) => (
+          <ActorCard key={name} name={name} role={role} image={image} />
+        ))}
       </div>
-      
     </>
-  )
-}
+  );
+};

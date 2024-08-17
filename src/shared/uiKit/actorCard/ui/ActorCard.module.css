@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.text {
+  color: #fff;
+}
+
+.imageWrapper {
+  border-radius: 100%;
+  width: 54px;
+  height: 54px;
+}
+
+.image {
+  max-height: 50px;
+  max-height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.gradient {
+  color: var(--font-light);
+  border: 2px double transparent;
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)),
+    radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.textWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
