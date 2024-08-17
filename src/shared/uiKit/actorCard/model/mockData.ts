@@ -7,16 +7,16 @@ export const mockData: IData[] = [
   {
     name: "Angelina Joly",
     role: "Singer",
-    image: "/assets/angelina_j.jpg",
+    image: "src/shared/assets/angelina_j.jpg",
   },
   {
     name: "Sherles Teron",
     role: "Dancer",
-    image: "/assets/sharlese_t.jpg",
+    image: "src/shared/assets/sharlese_t.jpg",
   },
   {
     name: "Some Beautiful Girl",
     role: "Dancer",
-    image: "/assets/willa_h.jpg",
+    image: "src/shared/assets/willa_h.jpg",
   },
 ];
