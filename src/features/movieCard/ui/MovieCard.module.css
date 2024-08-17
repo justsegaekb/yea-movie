@@ -1,0 +1,31 @@
+.movieCard {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 150px;
+  color: var(--font-light);
+  border-radius: 26px;
+}
+
+.gradient {
+  color: var(--font-light);
+  border: 1px double transparent;
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)),
+    radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.imageWrapper {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 124px;
+  height: 124px;
+}
+
+.movieCard:hover {
+  box-shadow: #6f4cff 0px 0px 20px 0px;
+}

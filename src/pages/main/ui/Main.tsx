@@ -4,9 +4,9 @@ import { Button } from "@/shared/uiKit/button";
 import { CategoryCard } from "@/shared/uiKit/categoryCard";
 import { Heading } from "@/shared/uiKit/heading";
 import { Input } from "@/shared/uiKit/input";
+import { MovieCard } from "@/features/movieCard";
 import { Paragraph } from "@/shared/uiKit/paragraph/ui/Paragraph";
 import { Rating } from "@/shared/uiKit/rating";
-
 export const Main = () => {
   return (
     <>
@@ -35,6 +35,7 @@ export const Main = () => {
       <Button>Кнопка</Button>
       <CategoryCard title="Фильмы" direction="left" />
       <CategoryCard title="Сериалы" direction="right" />
+      <MovieCard />
     </>
   );
 };
