@@ -1,0 +1,8 @@
+.rating {
+  display: flex;
+  flex-direction: row;
+}
+
+.active svg {
+  fill: #e7c825;
+}
