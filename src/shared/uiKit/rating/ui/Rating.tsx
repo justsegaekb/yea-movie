@@ -1,7 +1,7 @@
 import { DetailedHTMLProps, HtmlHTMLAttributes } from "react";
 import styles from "./Rating.module.css";
 import cn from "classnames";
-import StarIcon from "../../../../../public/assets/star.svg?react";
+import StarIcon from "@/shared/assets/star.svg?react";
 
 interface Props
   extends DetailedHTMLProps<

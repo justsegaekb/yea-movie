@@ -1,6 +1,7 @@
 import { ActorCard } from "@/shared/uiKit/actorCard";
 import { mockData } from "@/shared/uiKit/actorCard/model/mockData";
 import { Button } from "@/shared/uiKit/button";
+import { CategoryCard } from "@/shared/uiKit/categoryCard";
 import { Heading } from "@/shared/uiKit/heading";
 import { Input } from "@/shared/uiKit/input";
 import { Paragraph } from "@/shared/uiKit/paragraph/ui/Paragraph";
@@ -32,6 +33,8 @@ export const Main = () => {
       </div>
       <Input placeholder="Поле ввода" setValue={() => {}} />
       <Button>Кнопка</Button>
+      <CategoryCard title="Фильмы" direction="left" />
+      <CategoryCard title="Сериалы" direction="right" />
     </>
   );
 };
