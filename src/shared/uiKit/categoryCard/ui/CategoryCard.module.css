@@ -1,24 +1,18 @@
-.categoryCard {
-  position: relative;
-  width: 100px;
-  height: 100px;
-}
-
-.categoryCardLeft {
-  background: url("/src/shared/assets/category.svg") no-repeat;
-  background-size: contain;
-}
-
-.categoryCardRight {
-  background: url("/src/shared/assets/category2.svg") no-repeat;
-  background-size: contain;
-}
-
 .title {
   font-weight: 700;
   font-size: 14px;
   position: absolute;
-  top: 50%;
-  left: 10%;
   color: var(--font-light);
+  right: 50%;
+  top: 30%;
+}
+
+.wrapper {
+  display: flex;
+  flex-shrink: 1;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
 }
