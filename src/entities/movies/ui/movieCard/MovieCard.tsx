@@ -18,7 +18,8 @@ export const MovieCard = ({
   year,
   ...props
 }: Props) => {
-  const truncate = (str: string) => {
+  const truncate = (str: string | null): string => {
+    if (str === null) return "";
     if (str.length > 9) {
       return `${str.slice(0, 9)}...`;
     }
