@@ -1,9 +1,9 @@
-import { Main } from "@/pages/main";
+import { Page } from "@/pages/main";
 
 function BaseLayout() {
   return (
     <>
-      <Main />
+      <Page />
     </>
   );
 }

@@ -3,24 +3,21 @@ import { Skeleton } from "../uiKit/skeleton";
 
 interface Props {
   isLoading: boolean;
-  type?: "category" | "movie" | "actor" | "undefined";
+  type?: "category" | "movie" | "actor";
 }
 
-function withSkeleton<P extends object>(
+const withSkeleton = <P extends object>(
   Component: ComponentType<P>,
-  type: "category" | "movie" | "actor" | undefined,
-  count?: number | undefined,
-  isLoading?: boolean,
-) {
+  type: "category" | "movie" | "actor",
+  count: number,
+) => {
   return function WithSkeleton(props: Props & P) {
-    const { isLoading, type, ...restProps } = props;
-    console.log(isLoading);
-
+    const { isLoading } = props;
     if (isLoading) {
       return <Skeleton type={type} count={count} />;
     }
-    return <Component {...(restProps as P)} />;
+    return <Component {...(props as P)} />;
   };
-}
+};
 
 export default withSkeleton;
