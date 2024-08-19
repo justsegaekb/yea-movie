@@ -4,7 +4,7 @@ import { MoviesListWithSkeleton } from "@/features/moviesList/ui/MoviesList";
 
 export const MoviesListWithData = () => {
   const { isLoading } = useGetMoviesQuery(null);
-  const movies = useAppSelector((state) => state.movies.movies.docs) ?? [];
+  const movies = useAppSelector((state) => state.movies.movies.docs);
 
   return (
     <>
