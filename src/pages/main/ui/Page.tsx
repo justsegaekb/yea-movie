@@ -3,7 +3,7 @@ import styles from "./Page.module.css";
 import cn from "classnames";
 import { MoviesListWithData } from "@/widgets/MoviesListWithData/ui/MoviesListWithData";
 import { CategoriesListWithData } from "@/widgets/CategoriesListWithData/ui/CategoriesListWithData";
-
+import { Slider } from "@/features/slider";
 export const Page = () => {
   return (
     <>
@@ -18,7 +18,9 @@ export const Page = () => {
           </div>
           <div className={cn(styles.wrapper)}>
             <Heading size="medium">Most Popular</Heading>
-            <MoviesListWithData />
+            <Slider>
+              <MoviesListWithData />
+            </Slider>
           </div>
         </div>
       </div>

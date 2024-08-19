@@ -7,6 +7,7 @@ interface Props {
   categories: { name: string; slug: string }[];
   isLoading: boolean;
 }
+
 export const CategoriesList = ({ categories }: Props) => {
   return (
     <ul className={cn(styles.categoriesList)}>
