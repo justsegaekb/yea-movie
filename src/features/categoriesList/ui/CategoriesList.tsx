@@ -1,15 +1,13 @@
-import { useAppSelector } from "@/app/appStore";
-import { CategoryCard } from "@/shared/uiKit/categoryCard";
+import { CategoryCard } from "@/entities/categories";
 import withSkeleton from "@/shared/hoc/withSkeleton";
 import cn from "classnames";
 import styles from "./CategoriesList.module.css";
 
 interface Props {
+  categories: { name: string; slug: string }[];
   isLoading: boolean;
 }
-export const CategoriesList = ({ isLoading }: Props) => {
-  const categories = useAppSelector((state) => state.movies.categories);
-
+export const CategoriesList = ({ categories }: Props) => {
   return (
     <ul className={cn(styles.categoriesList)}>
       {categories?.map(({ name, slug }, i) => {

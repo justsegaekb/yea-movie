@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { CategoryCardSkeleton } from "../../loaders";
+import { CategoryCardSkeleton, MovieCardSkeleton } from "../../loaders";
 import styles from "./Skeleton.module.css";
 import cn from "classnames";
 
@@ -8,19 +8,23 @@ interface Props {
   type: "category" | "movie" | "actor";
   rtl?: boolean;
 }
+
 export const Skeleton = ({
   count = 1,
-  type = "category",
+  type,
   rtl = true,
 }: Props): ReactElement => {
   const mapping = {
     category: <CategoryCardSkeleton rtl={rtl} />,
-    movie: <></>,
+    movie: <MovieCardSkeleton />,
     actor: <></>,
   };
+
   const classNames = cn({
     [styles.categories]: type === "category",
+    [styles.movie]: type === "movie",
   });
+
   return (
     <>
       {count > 1 ? (

@@ -1,31 +1,38 @@
-import { DetailedHTMLProps, HTMLAttributes } from "react";
 import styles from "./MovieCard.module.css";
 import cn from "classnames";
 import { Heading } from "@/shared/uiKit/heading";
 import { Paragraph } from "@/shared/uiKit/paragraph/ui/Paragraph";
 
-interface Props
-  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+interface Props {
+  id: number;
   name: string | null;
   alternativeName: string | null;
   poster: string | null;
-  year: string | null;
+  year: number | null;
 }
 
 export const MovieCard = ({
-  name = "Брат 2",
+  name,
   alternativeName,
-  poster = "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/e9008e2f-433f-43b0-b9b8-2ea8e3fb6c9b/600x900",
-  year = "2002",
+  poster,
+  year,
   ...props
 }: Props) => {
+  const truncate = (str: string) => {
+    if (str.length > 9) {
+      return `${str.slice(0, 9)}...`;
+    }
+    return str;
+  };
   return (
     <div className={cn(styles.movieCard, styles.gradient)} {...props}>
       <div
         className={cn(styles.imageWrapper)}
         style={{ backgroundImage: `url("${poster}")` }}
       ></div>
-      <Heading size="medium">{name ?? alternativeName}</Heading>
+      <Heading size="medium">
+        {truncate(name) ?? truncate(alternativeName)}
+      </Heading>
       <Paragraph>{year}</Paragraph>
     </div>
   );

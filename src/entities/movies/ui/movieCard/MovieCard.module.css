@@ -5,22 +5,25 @@
   justify-content: center;
   align-items: center;
   max-width: 150px;
+  max-height: 190px;
   color: var(--font-light);
   border-radius: 26px;
+  text-overflow: ellipsis;
 }
 
 .gradient {
   color: var(--font-light);
   border: 1px double transparent;
-  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)),
-    radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-image: linear-gradient(#0d0e21, #0d0e21),
+    radial-gradient(circle at left top, #016eda, #d900c0);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
 
 .imageWrapper {
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  background-position: top;
   background-repeat: no-repeat;
   width: 124px;
   height: 124px;
