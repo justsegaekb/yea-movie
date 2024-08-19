@@ -1,9 +1,9 @@
-import { Page } from "@/pages/main";
+import { Outlet } from "react-router-dom";
 
-function BaseLayout() {
+export function BaseLayout() {
   return (
     <>
-      <Page />
+      <Outlet />
     </>
   );
 }
