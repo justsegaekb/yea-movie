@@ -1,4 +1,4 @@
-import { Main } from "./ui/Main";
+import { Page } from "./ui/Page";
 
+export { Page };
 
-export { Main };
