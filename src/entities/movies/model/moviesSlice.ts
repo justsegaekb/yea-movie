@@ -1,18 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { IMovie, ParamsType } from "../../../shared/types/types";
+import {
+  ParamsType,
+  MoviesApiResonse,
+  CategoriesTypeResponse,
+} from "../../../shared/types/types";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 interface State {
-  movies: IMovie[];
-  categories: string[];
+  movies: MoviesApiResonse;
+  categories: CategoriesTypeResponse[];
+  currentCategory: string;
   filters: ParamsType;
 }
 
 const initialState: State = {
-  movies: [],
+  movies: {},
   categories: [],
+  currentCategory: "",
   filters: {
     page: 1,
+    limit: 16,
     query: "",
   },
 };
@@ -21,15 +28,25 @@ export const moviesSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {
-    setMovies: (state, action: PayloadAction<IMovie[]>) => {
+    setMovies: (state, action: PayloadAction<MoviesApiResonse>) => {
       state.movies = action.payload;
     },
-    setCategories: (state, action: PayloadAction<string[]>) => {
+    setCategories: (state, action: PayloadAction<CategoriesTypeResponse[]>) => {
       state.categories = action.payload;
+    },
+    setFilters: (state, action: PayloadAction<ParamsType>) => {
+      state.filters = {
+        ...state.filters,
+        ...action.payload,
+      };
+    },
+    setCurrentCategory: (state, action: PayloadAction<string>) => {
+      state.currentCategory = action.payload;
     },
   },
 });
 
-export const { setMovies, setCategories } = moviesSlice.actions;
+export const { setMovies, setCategories, setFilters, setCurrentCategory } =
+  moviesSlice.actions;
 
 export default moviesSlice.reducer;

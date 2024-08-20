@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { ParamsType } from "../model/types";
+import { ParamsType, CategoriesTypeResponse } from "@/shared/types/types";
 import { setCategories } from "@/entities/movies/model/moviesSlice";
+
 const BASE_URL = import.meta.env.VITE_KINOPOISK_BASE_URLV1;
 const API_KEY = import.meta.env.VITE_X_API_KEY;
 
@@ -8,7 +9,7 @@ export const categoriesApi = createApi({
   reducerPath: "categoriesApi",
   baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
   endpoints: (builder) => ({
-    getCategories: builder.query<string[], ParamsType | null>({
+    getCategories: builder.query<CategoriesTypeResponse[], ParamsType | null>({
       query: (params) => {
         const { field = "type" } = params || {};
         return {

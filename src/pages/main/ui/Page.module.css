@@ -11,3 +11,15 @@
   gap: 14px;
   margin-top: 32px;
 }
+
+.main {
+  margin-top: 10px;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

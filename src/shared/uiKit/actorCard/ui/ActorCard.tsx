@@ -1,26 +1,21 @@
+import { Actors } from "@/shared/types/types";
 import styles from "./ActorCard.module.css";
 import cn from "classnames";
 
-interface Props {
-  name: string;
-  role: string;
-  image: string;
-}
-
-export const ActorCard = ({ name, role, image }: Props) => {
+export const ActorCard = ({ enName, photo, description }: Actors) => {
   return (
     <div className={cn(styles.container)}>
       <div className={cn(styles.imageWrapper, styles.gradient)}>
         <img
           className={cn(styles.image)}
-          src={image}
+          src={photo}
           alt="actor"
           width="100%"
         />
       </div>
       <div className={cn(styles.textWrapper)}>
-        <div className={cn(styles.text)}>{name}</div>
-        <div className={cn(styles.text)}>as {role}</div>
+        <div className={cn(styles.text)}>{enName}</div>
+        <div className={cn(styles.text)}>as {description}</div>
       </div>
     </div>
   );
