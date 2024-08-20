@@ -3,7 +3,7 @@ import { useGetMoviesQuery } from "@/entities/movies";
 import { MoviesListWithSkeleton } from "@/features/moviesList/ui/MoviesList";
 
 export const MoviesListWithData = () => {
-  const { isLoading } = useGetMoviesQuery(null);
+  const { isLoading } = useGetMoviesQuery({ limit: 8 });
   const movies = useAppSelector((state) => state.movies.movies.docs);
 
   return (

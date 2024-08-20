@@ -7,11 +7,13 @@ import { Paragraph } from "@/shared/uiKit/paragraph/ui/Paragraph";
 export const ErrorBoundary = () => {
   const error = useRouteError();
 
-  const mapping = {
+  const mapping: Record<number, string> = {
     404: "Запрашиваемая страниа не найдена",
     403: "Доступ к запрашиваемой странице запрещен",
     401: "Ошибка передачи токена в запросе",
+    500: "Cерверная ошибка",
   };
+
   return (
     <div className={cn(styles.container)}>
       <Heading size="large">YeaMovie</Heading>
