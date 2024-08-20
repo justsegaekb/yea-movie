@@ -30,7 +30,15 @@ export const moviesApi = createApi({
         dispatch(setMovies(data));
       },
     }),
+    getMovieById: builder.query<IMovie, number>({
+      query: (id) => ({
+        url: `movie/${id}`,
+        headers: {
+          "X-API-KEY": API_KEY,
+        },
+      }),
+    }),
   }),
 });
 
-export const { useGetMoviesQuery } = moviesApi;
+export const { useGetMoviesQuery, useGetMovieByIdQuery } = moviesApi;

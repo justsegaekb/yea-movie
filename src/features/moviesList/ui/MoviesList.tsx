@@ -28,4 +28,4 @@ export const MoviesList = ({ movies }: Props) => {
   );
 };
 
-export const MoviesListWithSkeleton = withSkeleton(MoviesList, "movie", 10);
+export const MoviesListWithSkeleton = withSkeleton(MoviesList, "movie", 8);
