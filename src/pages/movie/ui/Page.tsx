@@ -13,7 +13,6 @@ export const Page = () => {
 
   const { data, isLoading, error } = useGetMovieByIdQuery(Number(id));
   if (error) throw error;
-  console.log(data);
 
   return (
     <div className={cn(styles.container)}>
@@ -37,9 +36,9 @@ export const Page = () => {
               return (
                 <li key={p.id}>
                   <ActorCard
-                    name={p.enName}
-                    role={p.description}
-                    image={p.photo}
+                    enName={p.enName}
+                    description={p.description}
+                    photo={p.photo}
                   />
                 </li>
               );

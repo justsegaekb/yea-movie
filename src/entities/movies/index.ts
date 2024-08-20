@@ -1,7 +1,7 @@
 import { useGetMoviesQuery } from "./api/moviesApi";
 import moviesReducer from "./model/moviesSlice";
 import type {
-  Caregories,
+  CategoriesType,
   ParamsType,
   IMovie,
   MoviesApiResonse,
@@ -9,5 +9,4 @@ import type {
 import { MovieCard } from "./ui/movieCard/MovieCard";
 
 export { useGetMoviesQuery, moviesReducer, MovieCard };
-export type { Caregories, ParamsType, IMovie, MoviesApiResonse };
-
+export type { CategoriesType, ParamsType, IMovie, MoviesApiResonse };
