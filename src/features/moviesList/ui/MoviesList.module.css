@@ -4,3 +4,8 @@
   flex-wrap: wrap;
   gap: 8px;
 }
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,14 +1,18 @@
 import { useAppSelector } from "@/app/appStore";
-import { useGetMoviesQuery } from "@/entities/movies";
+import { IMovie, useGetMoviesQuery } from "@/entities/movies";
 import { MoviesListWithSkeleton } from "@/features/moviesList/ui/MoviesList";
 
 export const MoviesListWithData = () => {
-  const { isLoading } = useGetMoviesQuery({ limit: 8 });
-  const movies = useAppSelector((state) => state.movies.movies.docs);
+  const filters = useAppSelector((state) => state.movies.filters);
+
+  const { isLoading } = useGetMoviesQuery(filters);
+  const movies: IMovie[] | undefined = useAppSelector(
+    (state) => state.movies.movies.docs,
+  );
 
   return (
     <>
-      <MoviesListWithSkeleton isLoading={isLoading} movies={movies} />
+      <MoviesListWithSkeleton isLoading={isLoading} movies={movies ?? []} />
     </>
   );
 };
