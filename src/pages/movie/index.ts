@@ -1,3 +1,3 @@
-import { Page } from "./ui/Page.tsx";
+import { MoviePage } from "./ui/Page.tsx";
 
-export { Page };
+export { MoviePage };

@@ -1,8 +1,8 @@
-import { Actors } from "@/shared/types/types";
+import { ActorsType } from "@/shared/types/types";
 import styles from "./ActorCard.module.css";
 import cn from "classnames";
 
-export const ActorCard = ({ enName, photo, description }: Actors) => {
+export const ActorCard = ({ enName, photo, description }: ActorsType) => {
   return (
     <div className={cn(styles.container)}>
       <div className={cn(styles.imageWrapper, styles.gradient)}>

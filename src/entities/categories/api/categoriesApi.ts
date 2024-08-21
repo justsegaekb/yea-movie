@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { ParamsType, CategoriesTypeResponse } from "@/shared/types/types";
-import { setCategories } from "@/entities/movies/model/moviesSlice";
+import { setCategories } from "../model/categoriesSlice";
 
 const BASE_URL = import.meta.env.VITE_KINOPOISK_BASE_URLV1;
 const API_KEY = import.meta.env.VITE_X_API_KEY;

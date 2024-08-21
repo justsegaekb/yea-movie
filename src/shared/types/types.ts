@@ -22,7 +22,7 @@ interface RequestParams {
 }
 export type ParamsType = RequestParams | null;
 
-export interface Actors {
+export interface ActorsType {
   id?: number;
   enName: string | null;
   photo: string | undefined;
@@ -42,7 +42,7 @@ export interface IMovie {
   poster: Record<Url, string>;
   backdrop: Record<Url, string | null>;
   genres: Record<"name", string>[];
-  persons: Actors[];
+  persons: ActorsType[];
 }
 
 export interface MoviesApiResonse {
