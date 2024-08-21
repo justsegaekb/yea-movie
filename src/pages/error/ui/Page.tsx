@@ -1,4 +1,3 @@
-import { Heading } from "@/shared/uiKit/heading";
 import { Link, useRouteError } from "react-router-dom";
 import styles from "./Page.module.css";
 import cn from "classnames";
@@ -17,7 +16,6 @@ export const ErrorBoundary = () => {
   if (error instanceof Error) return null;
   return (
     <div className={cn(styles.container)}>
-      <Heading size="large">YeaMovie</Heading>
       <Paragraph> К сожалению, произошла ошибка :( </Paragraph>
       <Paragraph>Попробуйте вернуться на главную страницу</Paragraph>
       <Link to="/">

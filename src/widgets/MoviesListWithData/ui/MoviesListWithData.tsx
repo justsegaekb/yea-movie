@@ -1,6 +1,6 @@
 import { useAppSelector } from "@/app/appStore";
 import { IMovie, useGetMoviesQuery } from "@/entities/movies";
-import { MoviesListWithSkeleton } from "@/features/moviesList/ui/MoviesList";
+import { MoviesListWithSkeleton } from "./moviesList/ui/MoviesList";
 
 export const MoviesListWithData = () => {
   const filters = useAppSelector((state) => state.movies.filters);

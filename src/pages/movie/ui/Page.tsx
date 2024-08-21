@@ -8,7 +8,7 @@ import { Button } from "@/shared/uiKit/button";
 import { Link } from "react-router-dom";
 import { ActorCard } from "@/shared/uiKit/actorCard";
 
-export const Page = () => {
+export const MoviePage = () => {
   const id = new URLSearchParams(window.location.search).get("movie");
 
   const { data, isLoading, error } = useGetMovieByIdQuery(Number(id));

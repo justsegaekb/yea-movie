@@ -3,8 +3,8 @@ import withSkeleton from "@/shared/hoc/withSkeleton";
 import cn from "classnames";
 import styles from "./CategoriesList.module.css";
 import { useDispatch } from "react-redux";
-import { setCurrentCategory } from "@/entities/movies/model/moviesSlice";
 import { CategoriesType, CategoriesTypeResponse } from "@/shared/types/types";
+import { setCurrentCategory } from "@/entities/categories/model/categoriesSlice";
 
 interface Props {
   categories: CategoriesTypeResponse[];
