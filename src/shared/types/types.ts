@@ -3,7 +3,8 @@ export type CategoriesType =
   | "tv-series"
   | "anime"
   | "cartoon"
-  | "animated-series";
+  | "animated-series"
+  | "";
 
 export interface CategoriesTypeResponse {
   name: CategoriesType;
@@ -20,6 +21,7 @@ interface RequestParams {
   field?: string;
 }
 export type ParamsType = RequestParams | null;
+
 export interface Actors {
   id?: number;
   enName: string | null;
