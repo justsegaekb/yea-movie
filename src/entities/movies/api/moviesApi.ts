@@ -10,7 +10,7 @@ export const moviesApi = createApi({
   endpoints: (builder) => ({
     getMovies: builder.query<MoviesApiResonse, ParamsType>({
       query: (params) => {
-        const { page = 1, limit = 16, query = "" } = params || {};
+        const { page = 1, limit = 16, query } = params || {};
 
         return {
           url: "movie/search",
