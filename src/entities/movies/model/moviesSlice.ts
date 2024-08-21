@@ -3,13 +3,14 @@ import {
   ParamsType,
   MoviesApiResonse,
   CategoriesTypeResponse,
+  CategoriesType,
 } from "../../../shared/types/types";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 interface State {
   movies: MoviesApiResonse;
   categories: CategoriesTypeResponse[];
-  currentCategory: string;
+  currentCategory: CategoriesType;
   filters: ParamsType;
 }
 
@@ -40,7 +41,7 @@ export const moviesSlice = createSlice({
         ...action.payload,
       };
     },
-    setCurrentCategory: (state, action: PayloadAction<string>) => {
+    setCurrentCategory: (state, action: PayloadAction<CategoriesType>) => {
       state.currentCategory = action.payload;
     },
   },

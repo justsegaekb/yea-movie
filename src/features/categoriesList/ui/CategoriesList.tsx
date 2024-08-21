@@ -4,7 +4,7 @@ import cn from "classnames";
 import styles from "./CategoriesList.module.css";
 import { useDispatch } from "react-redux";
 import { setCurrentCategory } from "@/entities/movies/model/moviesSlice";
-import { CategoriesTypeResponse } from "@/shared/types/types";
+import { CategoriesType, CategoriesTypeResponse } from "@/shared/types/types";
 
 interface Props {
   categories: CategoriesTypeResponse[];
@@ -12,7 +12,7 @@ interface Props {
 
 export const CategoriesList = ({ categories }: Props) => {
   const dispatch = useDispatch();
-  const handleSelectCategory = (category: string) => {
+  const handleSelectCategory = (category: CategoriesType) => {
     dispatch(setCurrentCategory(category));
   };
   return (

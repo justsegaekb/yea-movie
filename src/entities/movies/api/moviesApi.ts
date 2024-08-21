@@ -38,16 +38,22 @@ export const moviesApi = createApi({
         },
       }),
     }),
-    getMoviesByCategory: builder.query<MoviesApiResonse, string>({
-      query: (type) => ({
-        url: `movie`,
-        headers: {
-          "X-API-KEY": API_KEY,
-        },
-        params: {
-          type,
-        },
-      }),
+    getMoviesByCategory: builder.query<MoviesApiResonse, ParamsType>({
+      query: (params) => {
+        const { page = 1, limit = 16, type } = params || {};
+
+        return {
+          url: "movie",
+          headers: {
+            "X-API-KEY": API_KEY,
+          },
+          params: {
+            page,
+            limit,
+            type,
+          },
+        };
+      },
       async onQueryStarted(_arg, { dispatch, queryFulfilled }) {
         const result = await queryFulfilled;
         const data = result.data;

@@ -40,7 +40,7 @@ export const MoviesList = ({ movies }: Props) => {
                 alternativeName={alternativeName}
                 id={id}
                 year={year}
-                poster={poster.previewUrl}
+                poster={poster?.previewUrl}
               />
             </li>
           );
